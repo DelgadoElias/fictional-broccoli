@@ -49,7 +49,7 @@ const primeraOferta =
         'descripcion normal', 
         listaBeneficiosPrimeraOferta, 
         4, 
-        'link_redirect'
+        'Seleccionar'
     );
 
 const segundaOferta = 
@@ -58,7 +58,7 @@ const segundaOferta =
         'Descripcion normal',
         listaBeneficiosSegundaOferta,
         7,
-        'link_redirect'
+        'Seleccionar'
     );
 
 

@@ -1,19 +1,23 @@
 import React from 'react';
+import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemText from '@mui/material/ListItemText';
+import { Typography } from '@mui/material';
 
-const Beneficio = ({ titulo, valor }) => {
+const Beneficio = ({ titulo, valor, color = '#202020' }) => {
 
-    return(<div class="beneficio">
-        <h3>
-        {
-            valor
-        }
-        </h3>
-        <h4>
-        {
-            titulo
-        }
-        </h4>
-    </div>)
+  return (<ListItem disablePadding>
+    <ListItemButton>
+      <ListItemText
+        primary={<BeneficioTexto texto={valor} numeroFuente={24} />}
+        secondary={<BeneficioTexto texto={titulo} numeroFuente={18} />} />
+    </ListItemButton>
+  </ListItem>)
 };
+
+// "Mini" Componente que solamente es utilizado dentro del componente de benficio
+const BeneficioTexto = ({ texto, numeroFuente, color }) => (
+  <Typography sx={{ fontSize: numeroFuente, textAlign: 'center', color }}>{texto}</Typography>
+);
 
 export default Beneficio;
